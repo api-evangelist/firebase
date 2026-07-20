@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://firebase.google.com/docs/auth,
+  https://firebase.google.com/docs/projects/api/reference/rest,
+  https://cloud.google.com/docs/authentication
+summary:
+  types: [apiKey, oauth2, bearer, serviceAccount, idToken]
+  api_key_in: [query]
+  oauth2_flows: [authorizationCode, serviceAccount]
+schemes:
+- name: apiKey
+  type: apiKey
+  in: query
+  parameter: key
+  note: >-
+    Firebase Web API key identifies the project on public REST endpoints
+    (Identity Toolkit, RTDB, Remote Config). Not a secret by itself — access is
+    governed by Security Rules and App Check.
+- name: oauth2
+  type: oauth2
+  note: >-
+    Google-hosted management/data REST APIs (Firebase Management, Firestore,
+    FCM v1) authenticate with Google OAuth 2.0 bearer access tokens. See
+    scopes/firebase-scopes.yml.
+  authorizationUrl: https://accounts.google.com/o/oauth2/v2/auth
+  tokenUrl: https://oauth2.googleapis.com/token
+- name: serviceAccount
+  type: oauth2
+  flow: serviceAccount
+  note: >-
+    Admin SDK and server-to-server access use a Google service-account key
+    (GOOGLE_APPLICATION_CREDENTIALS) exchanged for an OAuth access token.
+- name: firebaseIdToken
+  type: bearer
+  bearerFormat: JWT
+  note: >-
+    Firebase Authentication issues client ID tokens (JWTs) verified server-side
+    by the Admin SDK; issuer https://securetoken.google.com/<project-id>.
+- name: appCheck
+  type: apiKey
+  in: header
+  parameter: X-Firebase-AppCheck
+  note: >-
+    App Check attestation token asserting the request comes from an authentic
+    app instance; complements user auth, does not replace it.
