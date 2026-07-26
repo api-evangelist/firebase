@@ -1,0 +1,100 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://firebase.google.com/docs/admin/setup,
+  https://firebase.google.com/docs/web/setup, npm/PyPI/Maven/NuGet/pkg.go.dev
+packages:
+# ---- Web / JavaScript client SDK ----
+- language: javascript
+  registry: npm
+  name: firebase
+  url: https://www.npmjs.com/package/firebase
+  install: npm install firebase
+  official: true
+  note: Firebase Web (JS) client SDK, modular v9+.
+# ---- Admin SDKs (server) ----
+- language: javascript
+  registry: npm
+  name: firebase-admin
+  url: https://www.npmjs.com/package/firebase-admin
+  install: npm install firebase-admin
+  official: true
+  note: Admin SDK for Node.js.
+- language: python
+  registry: pypi
+  name: firebase-admin
+  url: https://pypi.org/project/firebase-admin/
+  install: pip install firebase-admin
+  official: true
+- language: java
+  registry: maven
+  name: com.google.firebase:firebase-admin
+  url: https://central.sonatype.com/artifact/com.google.firebase/firebase-admin
+  install: "implementation 'com.google.firebase:firebase-admin:9.10.0'"
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: firebase.google.com/go/v4
+  url: https://pkg.go.dev/firebase.google.com/go/v4
+  install: go get firebase.google.com/go/v4@latest
+  official: true
+- language: dotnet
+  registry: nuget
+  name: FirebaseAdmin
+  url: https://www.nuget.org/packages/FirebaseAdmin
+  install: dotnet add package FirebaseAdmin
+  official: true
+# ---- Cloud Functions ----
+- language: javascript
+  registry: npm
+  name: firebase-functions
+  url: https://www.npmjs.com/package/firebase-functions
+  install: npm install firebase-functions
+  official: true
+  note: Cloud Functions for Firebase SDK (Node.js).
+- language: python
+  registry: pypi
+  name: firebase-functions
+  url: https://pypi.org/project/firebase-functions/
+  install: pip install firebase-functions
+  official: true
+# ---- CLI / tooling ----
+- language: javascript
+  registry: npm
+  name: firebase-tools
+  url: https://www.npmjs.com/package/firebase-tools
+  install: npm install -g firebase-tools
+  official: true
+  note: Firebase CLI (see cli/firebase-cli.yml).
+# ---- Drop-in UI ----
+- language: javascript
+  registry: npm
+  name: firebaseui
+  url: https://www.npmjs.com/package/firebaseui
+  install: npm install firebaseui
+  official: true
+  note: FirebaseUI Web (drop-in auth UI); see components/firebase-components.yml.
+# ---- Apple (CocoaPods / SwiftPM) ----
+- language: swift
+  registry: cocoapods
+  name: Firebase
+  url: https://cocoapods.org/pods/Firebase
+  install: "pod 'Firebase'"
+  official: true
+  note: Apple platforms SDK; also via Swift Package Manager (firebase-ios-sdk).
+# ---- Flutter / Dart ----
+- language: dart
+  registry: pub.dev
+  name: firebase_core
+  url: https://pub.dev/packages/firebase_core
+  install: flutter pub add firebase_core
+  official: true
+  note: FlutterFire; sibling plugins cloud_firestore, firebase_auth, firebase_messaging, etc.
+# ---- Android BoM ----
+- language: kotlin
+  registry: maven
+  name: com.google.firebase:firebase-bom
+  url: https://central.sonatype.com/artifact/com.google.firebase/firebase-bom
+  install: "implementation platform('com.google.firebase:firebase-bom:34.16.0')"
+  official: true
+  note: Android Bill-of-Materials pinning all Android client library versions.

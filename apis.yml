@@ -1,8 +1,17 @@
 aid: firebase
 name: Firebase
-description: Firebase is a company surfaced as a portfolio company of dcvc, union-square-ventures and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Firebase is Google's app development platform — a backend-as-a-service (BaaS)
+  suite for building, running, and growing web and mobile apps. It bundles
+  managed backend products including Authentication, Cloud Firestore, Realtime
+  Database, Cloud Storage, Cloud Functions, Hosting and App Hosting, Cloud
+  Messaging (FCM), Remote Config, Crashlytics, Performance Monitoring, App
+  Distribution, Test Lab, A/B Testing, App Check, Firebase AI Logic, and
+  Extensions. Firebase exposes Google-hosted REST APIs (Management, Firestore,
+  Realtime Database, FCM, Remote Config, Identity Toolkit) plus first-party
+  client and Admin SDKs for Apple, Android, Web, Flutter, Unity, C++, Node.js,
+  Python, Java, Go, and .NET, a cross-platform CLI (firebase-tools), a local
+  Emulator Suite, and an official MCP server for agent-driven workflows.
 url: https://raw.githubusercontent.com/api-evangelist/firebase/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,17 +20,146 @@ x-backed-by:
 - union-square-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
+image: https://firebase.google.com/downloads/brand-guidelines/PNG/logo-logomark.png
 tags:
 - Company
-apis: []
+- Backend as a Service
+- Application Development
+- Mobile
+- Web
+- Authentication
+- Database
+- Cloud Functions
+- Messaging
+- Google
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Firebase Management API
+  description: >-
+    REST API to programmatically create and manage Firebase projects, apps
+    (Web, Android, Apple), and their configuration.
+  humanURL: https://firebase.google.com/docs/projects/api/reference/rest
+  baseURL: https://firebase.googleapis.com
+  properties:
+  - type: APIReference
+    url: https://firebase.google.com/docs/projects/api/reference/rest
+- name: Cloud Firestore REST API
+  description: >-
+    REST API for reading and writing documents, running queries, and managing
+    indexes in Cloud Firestore.
+  humanURL: https://firebase.google.com/docs/firestore/use-rest-api
+  baseURL: https://firestore.googleapis.com
+  properties:
+  - type: APIReference
+    url: https://firebase.google.com/docs/reference/rest/firestore
+- name: Firebase Realtime Database REST API
+  description: >-
+    REST API to read and write JSON data in the Firebase Realtime Database over
+    HTTPS.
+  humanURL: https://firebase.google.com/docs/reference/rest/database
+  baseURL: https://firebaseio.com
+  properties:
+  - type: APIReference
+    url: https://firebase.google.com/docs/reference/rest/database
+- name: Firebase Cloud Messaging HTTP v1 API
+  description: >-
+    REST API to send notification and data messages to devices via Firebase
+    Cloud Messaging (FCM).
+  humanURL: https://firebase.google.com/docs/reference/fcm/rest
+  baseURL: https://fcm.googleapis.com
+  properties:
+  - type: APIReference
+    url: https://firebase.google.com/docs/reference/fcm/rest/v1/projects.messages
 common:
+- type: VulnerabilityDisclosure
+  url: security/firebase-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/firebase-domain-security.yml
 - type: Website
-  url: https://firebase.com
+  url: https://firebase.google.com
+- type: DeveloperPortal
+  url: https://firebase.google.com
+- type: Documentation
+  url: https://firebase.google.com/docs
+- type: APIReference
+  url: https://firebase.google.com/docs/reference
+- type: GettingStarted
+  url: https://firebase.google.com/docs/guides
+- type: Console
+  url: https://console.firebase.google.com
+- type: SignUp
+  url: https://console.firebase.google.com
+- type: Pricing
+  url: https://firebase.google.com/pricing
+- type: Blog
+  url: https://firebase.blog
+- type: Support
+  url: https://firebase.google.com/support
+- type: GitHubOrganization
+  url: https://github.com/firebase
+- type: StatusPage
+  url: https://status.firebase.google.com
+- type: ChangeLog
+  url: https://firebase.google.com/support/releases
+- type: TermsOfService
+  url: https://firebase.google.com/terms
+- type: PrivacyPolicy
+  url: https://policies.google.com/privacy
+- type: TrustCenter
+  url: https://cloud.google.com/security/compliance
+- type: Compliance
+  url: https://cloud.google.com/security/compliance
+- type: Deprecation
+  url: https://cloud.google.com/terms/deprecation
+- type: Security
+  url: https://g.co/vrp
+- type: Packages
+  url: packages/firebase-packages.yml
+- type: SDKs
+  url: packages/firebase-packages.yml
+- type: CLI
+  url: cli/firebase-cli.yml
+- type: MCPServer
+  url: mcp/firebase-mcp.yml
+- type: Authentication
+  url: authentication/firebase-authentication.yml
+- type: OAuthScopes
+  url: scopes/firebase-scopes.yml
+- type: Conventions
+  url: conventions/firebase-conventions.yml
+- type: Lifecycle
+  url: lifecycle/firebase-lifecycle.yml
+- type: ChangeLog
+  url: changelog/firebase-changelog.yml
+- type: Components
+  url: components/firebase-components.yml
+- type: WellKnown
+  url: well-known/firebase-well-known.yml
+- type: SecurityTxt
+  url: well-known/firebase-security.txt
+- type: LLMsTxt
+  url: llms/firebase-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of Firebase / Google hosts
+hosts:
+- host: https://www.google.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: firebase-security.txt
+- host: https://accounts.google.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: firebase-openid-configuration.json
+- host: https://firebase.googleapis.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+- host: https://securetoken.google.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 404
+    note: >-
+      Firebase Auth secure-token OIDC discovery is project-scoped at
+      /<project-id>/.well-known/openid-configuration, not the bare host.
+- host: https://firebase.google.com
+  documents:
+  - path: /.well-known/api-catalog
+    status: 404
+notes: >-
+  Firebase Authentication builds on Google Identity; the Google OpenID Provider
+  configuration at accounts.google.com is the applicable OIDC discovery document.

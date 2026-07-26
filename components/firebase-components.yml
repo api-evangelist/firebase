@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://firebase.google.com/docs/auth/web/firebaseui,
+  https://github.com/firebase/firebaseui-web
+note: >-
+  Client-side drop-in UI components distinct from the server SDKs in
+  packages/. FirebaseUI provides prebuilt, customizable auth and data-binding
+  widgets across platforms.
+families:
+- family: FirebaseUI Auth
+  description: >-
+    Drop-in authentication flow UI (email/password, Google, Apple, phone, and
+    federated providers) with account linking and recovery.
+  platforms: [web, android, ios]
+  loaders:
+  - registry: npm
+    name: firebaseui
+    url: https://www.npmjs.com/package/firebaseui
+  - registry: cdn
+    url: https://www.gstatic.com/firebasejs/ui/
+- family: FirebaseUI Firestore / Realtime Database
+  description: >-
+    Data-binding view components (list adapters / bindings) that render
+    Firestore and Realtime Database collections in native UI.
+  platforms: [android, ios]
+- family: FlutterFire UI
+  description: Prebuilt Flutter auth and profile screens for Firebase.
+  platforms: [flutter]

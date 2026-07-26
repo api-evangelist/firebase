@@ -1,0 +1,38 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://firebase.google.com/docs/cli/mcp-server
+server:
+  name: firebase
+  official: true
+  transport: stdio
+  command: npx -y firebase-tools@latest mcp
+  distributed_in: firebase-tools (npm)
+  clients:
+  - Claude Code
+  - Claude Desktop
+  - Cursor
+  - VS Code Copilot
+  - Windsurf
+  - Cline
+  - Antigravity
+capabilities:
+  prompts:
+  - name: /firebase:init
+    description: Guided project initialization workflow.
+  - name: /firebase:deploy
+    description: Guided deploy workflow.
+  resources:
+    description: Documentation files supplied as MCP resources for complex tasks.
+  tools:
+    description: >-
+      LLM-callable functions for Firebase operations; groups below reflect the
+      documented capability areas. Tool names/counts vary by firebase-tools
+      version — see the docs for the authoritative list.
+    groups:
+    - project and app management (create/list projects and apps)
+    - authentication (manage users)
+    - Cloud Firestore and Realtime Database (read/write/query data)
+    - security rules (retrieve and validate rules)
+    - Cloud Messaging (send messages)
+    - deployment (Hosting, Functions)

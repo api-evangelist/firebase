@@ -1,0 +1,46 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://firebase.google.com/docs/reference,
+  https://cloud.google.com/apis/design (Google API Improvement Proposals)
+authentication:
+  ref: authentication/firebase-authentication.yml
+  styles: [api-key-query-param, oauth2-bearer, firebase-id-token-jwt, service-account]
+pagination:
+  style: page-token
+  params: [pageSize, pageToken]
+  response_fields: [nextPageToken]
+  note: >-
+    Google-hosted REST APIs (Management, Firestore) use AIP-158 token
+    pagination. Realtime Database uses query params (orderBy, limitToFirst,
+    limitToLast, startAt, endAt) rather than page tokens.
+field_masks:
+  param: updateMask
+  note: PATCH/update calls accept an updateMask (AIP-134) to update selected fields.
+versioning:
+  style: uri-path
+  ref: lifecycle/firebase-lifecycle.yml
+error_envelope:
+  format: google.rpc.Status
+  shape: '{ "error": { "code": <int>, "message": <string>, "status": <string>, "details": [] } }'
+  content_type: application/json
+  note: >-
+    Not RFC 9457 problem+json; Firebase/Google REST APIs return the canonical
+    Google error object. See errors handling in the per-API reference.
+  ref: errors/
+request_tracing:
+  note: >-
+    Google Cloud requests can be correlated via the x-request-id / trace headers
+    surfaced in Cloud Logging; no provider-documented client request-id contract
+    on the Firebase REST surface.
+idempotency:
+  supported: false
+  note: >-
+    Firebase REST APIs do not document a general client-supplied
+    Idempotency-Key header; writes are last-write-wins or transactional
+    (Firestore transactions / RTDB conditional writes with ETags), not
+    idempotency-key based. No Idempotency pointer emitted.
+rate_limit_signaling:
+  note: >-
+    Enforced via per-project quotas in Google Cloud; 429/RESOURCE_EXHAUSTED on
+    limit. Quotas managed in the Cloud console rather than per-response headers.

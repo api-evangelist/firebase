@@ -1,0 +1,52 @@
+generated: '2026-07-19'
+method: searched
+source: https://firebase.google.com/docs/cli
+name: Firebase CLI
+binary: firebase
+package: packages/firebase-packages.yml  # firebase-tools on npm
+current_version: 15.22.4
+install:
+- method: npm
+  command: npm install -g firebase-tools
+- method: standalone-binary
+  command: curl -sL https://firebase.tools | bash
+  note: Standalone auto-install script (macOS/Linux); Windows binary also published.
+auth:
+  login: firebase login
+  ci_token: firebase login:ci
+  note: Interactive OAuth login, or GOOGLE_APPLICATION_CREDENTIALS / FIREBASE_TOKEN for CI.
+command_groups:
+- group: projects
+  commands: [projects:list, projects:create, use, apps:create, apps:list, apps:sdkconfig]
+- group: deploy
+  commands: [deploy, "deploy --only hosting", "deploy --only functions", "deploy --only firestore"]
+- group: hosting
+  commands: [hosting:channel:deploy, hosting:channel:list, hosting:sites:create, hosting:clone]
+- group: functions
+  commands: [functions:log, functions:shell, functions:config:get, functions:config:set, functions:delete]
+- group: firestore
+  commands: [firestore:indexes, firestore:delete, firestore:databases:list]
+- group: database
+  commands: [database:get, database:set, database:push, database:remove, database:profile]
+- group: auth
+  commands: [auth:import, auth:export]
+- group: emulators
+  commands: [emulators:start, emulators:exec, emulators:export]
+- group: extensions
+  commands: [ext:install, ext:list, ext:configure, ext:uninstall]
+- group: remoteconfig
+  commands: [remoteconfig:get, remoteconfig:versions:list, remoteconfig:rollback]
+- group: appdistribution
+  commands: [appdistribution:distribute, appdistribution:testers:add]
+- group: agent
+  commands: [mcp, init]
+  note: "'firebase mcp' launches the official MCP server (stdio); see mcp/firebase-mcp.yml."
+key_flows:
+- name: Initialize a project
+  command: firebase init
+- name: Deploy hosting + functions
+  command: firebase deploy
+- name: Run the local Emulator Suite
+  command: firebase emulators:start
+- name: Preview channel deploy
+  command: firebase hosting:channel:deploy preview

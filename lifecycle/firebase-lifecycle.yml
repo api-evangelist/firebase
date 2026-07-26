@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: >-
+  https://firebase.google.com/support/releases,
+  https://firebase.google.com/terms/service-level-agreement,
+  https://status.firebase.google.com
+versioning:
+  scheme: uri-path
+  note: >-
+    Google-hosted REST APIs use URI-path versioning (v1, v1beta1) per Google API
+    Improvement Proposals. Client/Admin SDKs use semantic versioning
+    (MAJOR.MINOR.PATCH) with weekly platform-specific releases.
+  docs: https://firebase.google.com/support/releases
+deprecation:
+  policy_url: https://cloud.google.com/terms/deprecation
+  note: >-
+    Firebase REST APIs follow the Google Cloud deprecation policy; GA API
+    versions carry a minimum 12-month deprecation window. SDK deprecations are
+    announced in the Firebase release notes.
+sla:
+  url: https://firebase.google.com/terms/service-level-agreement
+  note: >-
+    SLAs published for Cloud Firestore, Realtime Database, Cloud Storage,
+    Hosting, and other GA products on the Blaze plan.
+status_page: https://status.firebase.google.com

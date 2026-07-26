@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: searched
+source: https://firebase.google.com/support/releases
+scheme: semver-per-platform
+note: >-
+  Firebase publishes a single dated release-notes stream covering all platform
+  SDKs and the CLI; each platform versions independently under semver.
+current_versions:
+  apple: 12.16.0
+  android_bom: 34.16.0
+  javascript: 12.16.0
+  flutter_bom: 4.17.0
+  unity: 13.14.0
+  cpp: 13.10.0
+  admin_nodejs: 14.2.0
+  admin_java: 9.10.0
+  admin_python: 7.5.0
+  cli: 15.22.4
+entries:
+- date: '2026-07-17'
+  platform: unity
+  version: 13.14.0
+  highlights: Cloud Functions enhancements; Crashlytics bug fixes.
+- date: '2026-07-16'
+  platform: admin_nodejs
+  version: 14.2.0
+  breaking: false
+  highlights: New features and deprecations in Cloud Functions; Firebase SQL Connect fixes.
+- date: '2026-07-14'
+  platform: cpp
+  version: 13.10.0
+  highlights: Remote Config improvements.
+- date: '2026-07-13'
+  platform: flutter_bom
+  version: 4.17.0
+  highlights: Cloud Firestore and Authentication fixes.
+- date: '2026-07-09'
+  platform: multiple
+  highlights: >-
+    Crashlytics groups memory-related terminations on Android 17+; multiple
+    platform SDKs updated.

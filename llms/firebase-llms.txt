@@ -1,0 +1,44 @@
+# Firebase
+
+> Firebase is Google's app development platform — a backend-as-a-service suite for building, running, and growing web and mobile apps. It provides managed backend products (Authentication, Cloud Firestore, Realtime Database, Cloud Storage, Cloud Functions, Hosting, Cloud Messaging, Remote Config, Crashlytics, and more), Google-hosted REST APIs, first-party client and Admin SDKs, a cross-platform CLI, a local Emulator Suite, and an official MCP server.
+
+## APIs
+
+- [Firebase Management API](https://firebase.google.com/docs/projects/api/reference/rest): Create and manage projects, apps, and configuration (https://firebase.googleapis.com).
+- [Cloud Firestore REST API](https://firebase.google.com/docs/firestore/use-rest-api): Documents, queries, and indexes (https://firestore.googleapis.com).
+- [Realtime Database REST API](https://firebase.google.com/docs/reference/rest/database): Read/write JSON data over HTTPS.
+- [Cloud Messaging HTTP v1 API](https://firebase.google.com/docs/reference/fcm/rest): Send notification and data messages (https://fcm.googleapis.com).
+
+## Docs
+
+- [Documentation](https://firebase.google.com/docs)
+- [API Reference](https://firebase.google.com/docs/reference)
+- [Get Started Guides](https://firebase.google.com/docs/guides)
+- [Admin SDK Setup](https://firebase.google.com/docs/admin/setup)
+- [CLI Reference](https://firebase.google.com/docs/cli)
+- [MCP Server](https://firebase.google.com/docs/cli/mcp-server)
+- [OAuth Scopes](https://developers.google.com/identity/protocols/oauth2/scopes#firebase)
+
+## Artifacts
+
+- [Packages / SDKs](packages/firebase-packages.yml)
+- [CLI command surface](cli/firebase-cli.yml)
+- [MCP server](mcp/firebase-mcp.yml)
+- [Authentication profile](authentication/firebase-authentication.yml)
+- [OAuth scopes](scopes/firebase-scopes.yml)
+- [API conventions](conventions/firebase-conventions.yml)
+- [Lifecycle & versioning](lifecycle/firebase-lifecycle.yml)
+- [Changelog](changelog/firebase-changelog.yml)
+- [Embedded components](components/firebase-components.yml)
+- [Well-known documents](well-known/firebase-well-known.yml)
+
+## Operations
+
+- [Pricing](https://firebase.google.com/pricing): Spark (free) and Blaze (pay-as-you-go) plans.
+- [Status](https://status.firebase.google.com)
+- [Release Notes](https://firebase.google.com/support/releases)
+- [Console](https://console.firebase.google.com)
+- [Blog](https://firebase.blog)
+- [GitHub](https://github.com/firebase)
+- [Terms](https://firebase.google.com/terms)
+- [Privacy](https://policies.google.com/privacy)
