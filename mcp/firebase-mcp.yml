@@ -25,10 +25,8 @@ capabilities:
   resources:
     description: Documentation files supplied as MCP resources for complex tasks.
   tools:
-    description: >-
-      LLM-callable functions for Firebase operations; groups below reflect the
-      documented capability areas. Tool names/counts vary by firebase-tools
-      version — see the docs for the authoritative list.
+    description: LLM-callable functions for Firebase operations; groups below reflect the documented capability
+      areas. Tool names/counts vary by firebase-tools version — see the docs for the authoritative list.
     groups:
     - project and app management (create/list projects and apps)
     - authentication (manage users)
@@ -36,3 +34,8 @@ capabilities:
     - security rules (retrieve and validate rules)
     - Cloud Messaging (send messages)
     - deployment (Hosting, Functions)
+deployment:
+  mode: local-stdio
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
