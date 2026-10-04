@@ -58,6 +58,7 @@ tags:
 - Cloud Functions
 - Messaging
 - Google
+- Real-Time
 tags_raw:
 - Company
 - Backend as a Service
@@ -69,6 +70,7 @@ tags_raw:
 - Cloud Functions
 - Messaging
 - Google
+- Real-Time
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
