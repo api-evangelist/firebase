@@ -69,7 +69,7 @@
     - alpha
     in_cloud: false
     builder: unknown (community connector; contributor not in the record)
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
 - slug: firebase-fivetran
   label: Fivetran
@@ -95,5 +95,5 @@
     - connectors/databases/firebase
     vendor_link: https://firebase.google.com
     builder: Fivetran
-  status: pending-partner-spec
+  status: not-a-workflow
   arazzo: null
