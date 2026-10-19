@@ -106,12 +106,76 @@ edges:
     builder: Fivetran
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: npm registry
+  partner: npm
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (JavaScript/TypeScript)
+  evidence: https://www.npmjs.com/package/firebase
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: npm registry (public registry JSON)
+    spec_file: null
+    language: JavaScript/TypeScript
+    packages:
+    - name: firebase
+      version: 13.0.0
+      released: null
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/firebase
+      repo_leg: domain:google.com
+      publisher_leg: email:google.com
+      matched_by: domain+name-among-holders
+    - name: firebase-admin
+      version: 14.5.0
+      released: '2026-09-23'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/firebase-admin
+      repo_leg: domain:google.com
+      publisher_leg: email:google.com
+      matched_by: domain+name-among-holders
+    - name: firebase-functions
+      version: 7.4.0
+      released: '2026-09-15'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/firebase-functions
+      repo_leg: shared-github-org:firebase
+      publisher_leg: email:google.com
+      matched_by: domain+name-among-holders
+    - name: firebase-tools
+      version: 15.34.0
+      released: '2026-10-14'
+      released_field: modified
+      lapsed: false
+      page: https://www.npmjs.com/package/firebase-tools
+      repo_leg: shared-github-org:firebase
+      publisher_leg: email:google.com
+      matched_by: domain+name-among-holders
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 method: searched
 checked:
+- https://api.nuget.org/v3
 - https://connectors.airbyte.com/files/registries/v0/cloud_registry.json
 - https://connectors.airbyte.com/files/registries/v0/oss_registry.json
+- https://crates.io/api/v1
 - https://fivetran.com/docs-sitemap.xml
 - https://fivetran.com/docs/connectors/partner-built-program
 - https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/
+- https://proxy.golang.org
+- https://pypi.org/pypi
+- https://registry.npmjs.org
+- https://repo1.maven.org/maven2
+- https://rubygems.org/api/v1
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/firebase
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/firebase
