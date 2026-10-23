@@ -193,6 +193,36 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-official-clis.py
   first_seen: '2026-10-20'
+- partner_name: pub.dev
+  partner: pub-dev
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Dart/Flutter)
+  evidence: https://pub.dev/packages/firebase_core
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: pub.dev (public registry JSON)
+    spec_file: null
+    language: Dart/Flutter
+    packages:
+    - name: firebase_core
+      version: 5.0.0
+      released: '2026-10-15'
+      released_field: published
+      lapsed: false
+      page: https://pub.dev/packages/firebase_core
+      repo_leg: not required (verified publisher)
+      publisher_leg: verified-publisher:google.com
+      matched_by: domain+name-among-holders
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-php-dart-elixir-package-registries.py
+    detected: '2026-10-22'
+  detected_by: sweep-php-dart-elixir-package-registries.py
+  first_seen: '2026-10-22'
 method: searched
 checked:
 - https://api.nuget.org/v3
@@ -214,4 +244,7 @@ checked:
 - https://repo1.maven.org/maven2
 - https://rubygems.org/api/v1
 - https://www.twilio.com/docs/segment/connections/destinations/catalog/firebase
+- https://hex.pm/api
+- https://packagist.org/packages
+- https://pub.dev/api
 source: https://www.twilio.com/docs/segment/connections/destinations/catalog/firebase
